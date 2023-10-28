@@ -1,14 +1,13 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-// console.log(galleryItems);
+
 
 const galleryContainer = document.querySelector(".gallery");
 const itemsMarkup = createGalleryItemsMarkup(galleryItems);
 
 
 galleryContainer.insertAdjacentHTML("beforeend", itemsMarkup);
-galleryContainer.addEventListener("click", onImgClick);
 
 function createGalleryItemsMarkup(items) {
   return items
@@ -26,10 +25,8 @@ function createGalleryItemsMarkup(items) {
         )
         .join("");
       };
-const lightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt", captionDelay: 250
-});
 
-//  const lightbox = new SimpleLightbox('.gallery a', {
-//   captionsData: 'alt', captionPosition: 'bottom', captionDelay: 250
-// });
+
+ const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt', captionPosition: 'top-right', captionDelay: 250
+});
