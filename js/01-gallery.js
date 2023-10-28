@@ -9,7 +9,7 @@ galleryContainer.insertAdjacentHTML("beforeend", itemsMarkup);
 console.log(galleryItems);
 function createGalleryItemsMarkup(items) {
     return items.map(({ preview, original, description }) => {
-        return `<div class = "gallery__item">
+        return `<li class = "gallery__item">
         <a class = "gallery__link" href ="${original}">
         <img
         class="gallery__image"
@@ -17,7 +17,7 @@ function createGalleryItemsMarkup(items) {
         data-source="${original}"
         alt="${description}" />
         </a>
-        </div>`;
+        </li>`;
     })
     .join("");
 }
