@@ -1,50 +1,41 @@
 // --------------Сonnecting styles---------------------------
-const item = document.querySelector("a");
-  item.style.listStyleType = "none";
-  item.style.textDecoration = "none";
-  item.style.backgroundColor = "#97a5ff";
-  item.style.fontSize = "16px";
-  item.style.fontWeight = "400";
-  item.style.color = "blue";
-  item.style.display = "inline-block";
-  item.style.padding = "0px 10px";  
-  item.style.borderRadius = "120px 100px 15px";
-  item.style.boxShadow = "0px 2px 4px 2px rgba(143, 209, 233, 0.9)";
-  // });
 const container = document.querySelector("body");
-// container.style.backgroundColor = "#70a8c2";
+const itemStyle = document.querySelector("a");
+itemStyle.style.listStyleType = "none";
+itemStyle.style.textDecoration = "none";
+itemStyle.style.backgroundColor = "#97a5ff";
+itemStyle.style.fontSize = "16px";
+itemStyle.style.fontWeight = "400";
+itemStyle.style.color = "blue";
+itemStyle.style.display = "inline-block";
+itemStyle.style.padding = "0px 10px";
+itemStyle.style.borderRadius = "120px 100px 15px";
+itemStyle.style.boxShadow = "0px 2px 4px 2px rgba(143, 209, 233, 0.9)";
+itemStyle.style.transition = "background-color 0.3s ease-in-out";
 container.style.background = "linear-gradient(to right,#3f87a6, #ebf8e1, #fff49f)";
 
-
-item.style.transition = "background-color 0.3s ease-in-out";
-
-item.addEventListener("mouseenter", () => {
-  item.style.background = "linear-gradient(to bottom, #0147a6, #fff49f)";
-  item.style.backgroundColor = "#82d8e5";
-  item.style.boxShadow = "4px 4px 0px 1px rgba(56, 100, 105, 0.5)"; 
+itemStyle.addEventListener("mouseenter", () => {
+  itemStyle.style.background = "linear-gradient(to bottom, #0147a6, #fff49f)";
+  itemStyle.style.backgroundColor = "#82d8e5";
+  itemStyle.style.boxShadow = "4px 4px 0px 1px rgba(56, 100, 105, 0.5)";
 });
 
-item.addEventListener("mouseleave", () => {
-  item.style.background = "none";
-  item.style.backgroundColor = "#97a5ff";
-  item.style.boxShadow = "0px 2px 4px 2px rgba(143, 209, 233, 0.9)";
+itemStyle.addEventListener("mouseleave", () => {
+  itemStyle.style.background = "none";
+  itemStyle.style.backgroundColor = "#97a5ff";
+  itemStyle.style.boxShadow = "0px 2px 4px 2px rgba(143, 209, 233, 0.9)";
 });
-
-
 
 // ------------------------------------------------------------
-
 
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-
-
 const galleryContainer = document.querySelector(".gallery");
 const itemsMarkup = createGalleryItemsMarkup(galleryItems);
+galleryContainer.insertAdjacentHTML("beforeend", itemsMarkup);
 let lightbox;
 
-galleryContainer.insertAdjacentHTML("beforeend", itemsMarkup);
 galleryContainer.addEventListener("click", onImgClick);
 
 function createGalleryItemsMarkup(items) {
@@ -63,7 +54,6 @@ function createGalleryItemsMarkup(items) {
     )
     .join("");
 }
-
 
 function onImgClick(evt) {
   evt.preventDefault();
