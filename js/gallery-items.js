@@ -20,14 +20,16 @@ itemsStyle.forEach((itemStyle) => {
   container.style.background = "linear-gradient(to right,#3f87a6, #ebf8e1, #fff49f)";
   itemStyle.parentNode.style.display = "flex";
   itemStyle.parentNode.style.flexDirection = "column";
-
-itemStyle.addEventListener("mouseenter", () => {
+  
+  itemStyle.addEventListener("mouseenter", () => {
+  itemStyle.style.fontWeight = "500";
   itemStyle.style.background = "linear-gradient(to bottom, #0147a6, #fff49f)";
   itemStyle.style.backgroundColor = "#82d8e5";
   itemStyle.style.boxShadow = "4px 4px 0px 1px rgba(56, 100, 105, 0.5)";
 });
 
 itemStyle.addEventListener("mouseleave", () => {
+  itemStyle.style.fontWeight = "400";
   itemStyle.style.background = "none";
   itemStyle.style.backgroundColor = "#97a5ff";
   itemStyle.style.boxShadow = "0px 2px 4px 2px rgba(143, 209, 233, 0.9)";
