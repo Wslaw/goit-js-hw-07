@@ -10,6 +10,8 @@ itemsStyle.forEach((itemStyle) => {
   itemStyle.style.fontWeight = "400";
   itemStyle.style.color = "blue";
   // itemStyle.style.display = "inline-block";
+  itemStyle.style.width = "13%";
+  itemStyle.style.marginTop = "10px";
   itemStyle.style.padding = "0px 10px";
   itemStyle.style.borderRadius = "120px 100px 15px";
   itemStyle.style.boxShadow = "0px 2px 4px 2px rgba(143, 209, 233, 0.9)";
@@ -18,7 +20,17 @@ itemsStyle.forEach((itemStyle) => {
   itemStyle.parentNode.style.display = "flex";
   itemStyle.parentNode.style.flexDirection = "column";
 
+itemStyle.addEventListener("mouseenter", () => {
+  itemStyle.style.background = "linear-gradient(to bottom, #0147a6, #fff49f)";
+  itemStyle.style.backgroundColor = "#82d8e5";
+  itemStyle.style.boxShadow = "4px 4px 0px 1px rgba(56, 100, 105, 0.5)";
+});
 
+itemStyle.addEventListener("mouseleave", () => {
+  itemStyle.style.background = "none";
+  itemStyle.style.backgroundColor = "#97a5ff";
+  itemStyle.style.boxShadow = "0px 2px 4px 2px rgba(143, 209, 233, 0.9)";
+});
 });
 
 
