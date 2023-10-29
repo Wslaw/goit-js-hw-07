@@ -1,7 +1,7 @@
 console.log("Script is running");
 
 const container = document.querySelector("body");
-const itemsStyle = document.querySelectorAll("li");
+const itemsStyle = document.querySelectorAll("a");
 itemsStyle.forEach((itemStyle) => {
   itemStyle.style.listStyleType = "none";
   itemStyle.style.textDecoration = "none";
