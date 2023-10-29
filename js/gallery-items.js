@@ -1,3 +1,33 @@
+console.log("Script is running");
+
+const container = document.querySelector("body");
+const itemsStyle = document.querySelectorAll("li");
+itemsStyle.forEach((itemStyle) => {
+  itemStyle.style.listStyleType = "none";
+  itemStyle.style.textDecoration = "none";
+  itemStyle.style.backgroundColor = "#97a5ff";
+  itemStyle.style.fontSize = "16px";
+  itemStyle.style.fontWeight = "400";
+  itemStyle.style.color = "blue";
+  // itemStyle.style.display = "inline-block";
+  itemStyle.style.padding = "0px 10px";
+  itemStyle.style.borderRadius = "120px 100px 15px";
+  itemStyle.style.boxShadow = "0px 2px 4px 2px rgba(143, 209, 233, 0.9)";
+  itemStyle.style.transition = "background-color 0.3s ease-in-out";
+  container.style.background = "linear-gradient(to right,#3f87a6, #ebf8e1, #fff49f)";
+  itemStyle.parentNode.style.display = "flex";
+  itemStyle.parentNode.style.flexDirection = "column";
+
+
+});
+
+
+
+
+
+
+
+
 export const galleryItems = [
   {
     preview:
