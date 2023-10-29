@@ -8,6 +8,7 @@ const itemStyle = document.querySelector("a");
 itemStyle.style.listStyleType = "none";
 itemStyle.style.textDecoration = "none";
 itemStyle.style.backgroundColor = "#97a5ff";
+itemStyle.style.width = "8%";
 itemStyle.style.fontSize = "16px";
 itemStyle.style.fontWeight = "400";
 itemStyle.style.color = "blue";
