@@ -1,3 +1,7 @@
+import { galleryItems } from "./gallery-items.js";
+// Change code below this line
+
+// 
 // --------------Сonnecting styles---------------------------
 const container = document.querySelector("body");
 const itemStyle = document.querySelector("a");
@@ -28,8 +32,6 @@ itemStyle.addEventListener("mouseleave", () => {
 
 // ------------------------------------------------------------
 
-import { galleryItems } from "./gallery-items.js";
-// Change code below this line
 
 const galleryContainer = document.querySelector(".gallery");
 const itemsMarkup = createGalleryItemsMarkup(galleryItems);
