@@ -59,16 +59,7 @@ function createGalleryItemsMarkup(items) {
       };
 
 
-//  const lightbox = new SimpleLightbox(".gallery a", {
-  //  captionsData: "alt",
-  //  captionPosition: "top-right",
-  //  captionDelay: 250,
-  //  closeText: "",
-  //  showCounter: 0,
-  //  animationSpeed: 300,
-  //  enableKeyboard: true, 
-  //  doubleTapZoom: 1.5,
-//  });
+
 let gallery = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionPosition: "top",
@@ -81,18 +72,12 @@ let gallery = new SimpleLightbox(".gallery a", {
   fadeSpeed: 250,
 });;
 gallery.on("show.simplelightbox", function () {
-// itemStyleLink.style.backgroundColor = "transparent";
-// itemStyleLink.style.color = "transparent";
 itemStyleLink.style.display = "none";
 });
 
 
 gallery.on("closed.simplelightbox", function () {
-  // itemStyleLink.style.transition = "timing-function cubic-bezier(0.4, 0, 0.58, 1) 2000ms";
   itemStyleLink.style.display = "inline-block";
-  // setTimeout(function () {
-  //   itemStyleLink.style.transition = "timing-function cubic-bezier(0.4, 0, 0.58, 1) 200ms";
-  //   itemStyleLink.style.display = "inline-block";
-  // }, 300); // Затримка 1000 мілісекунд (1 секунда)
+ 
 });
 
